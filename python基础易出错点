@@ -1,3 +1,12 @@
-#### 1 关于list中调用sort()方法的注意点：
+# 这个知识点注意：
 list1 = [1,9,5,8,7,3,2,0,4]
+print(list.sort)
+>>><built-in method sort of list object at 0x00000237E5E699C8>
+其中输出的结果显示其为一个对象；
 print(list.sort())
+>>>None
+在这段中返回值为空，解释为：调用函数后实现其功能后，该方法会返回一个空值表示函数执行完成，自然在赋值过程中会赋值为0;
+正确的使用方法是：
+list1.sort()
+print(list1)
+此处直接输出list1 的原因是：由于sort()函数直接改变list1中的值并将其放在list1中，直接输出就行了；
